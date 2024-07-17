@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2024-07-17T08:02:40.857Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36" etag="pJfes3GK7GBJGMIK7hqW" version="24.6.5" type="github">
+<mxfile host="app.diagrams.net" modified="2024-07-17T08:11:35.465Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36" etag="CqImNxcedmhEFC35vO85" version="24.6.5" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
-    <mxGraphModel dx="729" dy="744" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="9999999999" pageHeight="999999999" math="0" shadow="0">
+    <mxGraphModel dx="2049" dy="1066" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="9999999999" pageHeight="999999999" math="0" shadow="0">
       <root>
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
@@ -10,20 +10,59 @@
         <mxCell id="puL79OhdXBKn2q62L_fg-0" value="初始化 sensor&lt;br&gt;IMP 系统&lt;br&gt;设置 isp 参数，设置 isp 参数（亮度，饱和度）" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=16;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="610" y="60" width="200" height="100" as="geometry" />
         </mxCell>
+        <mxCell id="puL79OhdXBKn2q62L_fg-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="puL79OhdXBKn2q62L_fg-1" target="puL79OhdXBKn2q62L_fg-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="puL79OhdXBKn2q62L_fg-1" value="创建通道，提供数据" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=16;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="650" y="220" width="120" height="50" as="geometry" />
         </mxCell>
+        <mxCell id="puL79OhdXBKn2q62L_fg-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="puL79OhdXBKn2q62L_fg-3" target="puL79OhdXBKn2q62L_fg-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="puL79OhdXBKn2q62L_fg-3" value="编码器 &lt;br&gt;码率控制器&lt;br&gt;通道属性&lt;br&gt;初始化Channel属性&lt;br&gt;注册到 group" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=16;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="590" y="310" width="270" height="130" as="geometry" />
+          <mxGeometry x="575" y="310" width="270" height="130" as="geometry" />
         </mxCell>
         <mxCell id="puL79OhdXBKn2q62L_fg-4" value="/* Step.2 FrameSource init */&#xa;sample_framesource_init();&#xa;    // 创建通道，给后端模块提供数据源;设置通道的相关属性&#xa;    IMP_FrameSource_CreateChn(chn[i].index, &amp;chn[i].fs_chn_attr);&#xa;    IMP_FrameSource_SetChnAttr(chn[i].index, &amp;chn[i].fs_chn_attr);" style="text;whiteSpace=wrap;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="800" y="220" width="390" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="puL79OhdXBKn2q62L_fg-5" value="/* Step.1 System init */&#xa;sample_system_init();&#xa;    /* isp osd and ipu osd buffer size set */&#xa;    IMP_OSD_SetPoolSize(512*1024);&#xa;    IMP_ISP_Tuning_SetOsdPoolSize(512 * 1024);&#xa;    // 设置 sensor 基本信息&#xa;    memset(&amp;sensor_info, 0, sizeof(IMPSensorInfo));&#xa;    // 打开ISP模块&#xa;    ret = IMP_ISP_Open();&#xa;    // 添加一个sensor，用于向ISP模块提供数据源&#xa;    int IMP_ISP_AddSensor(IMPSensorInfo *pinfo);&#xa;    // 使能一个sensor&#xa;    int IMP_ISP_EnableSensor(void);&#xa;    // IMP系统初始化.&#xa;    int IMP_System_Init(void);&#xa;    // 使能ISP效果调试功能&#xa;    int IMP_ISP_EnableTuning(void);&#xa;    // 设置ISP 综合效果图片 对比度 锐度 饱和度 亮度参数 ，工作模式，正常模式或夜视模式；&#xa;    IMP_ISP_Tuning_SetContrast(128);&#xa;    IMP_ISP_Tuning_SetSharpness(128);&#xa;    IMP_ISP_Tuning_SetSaturation(128);&#xa;    IMP_ISP_Tuning_SetBrightness(128);&#xa;    ret = IMP_ISP_Tuning_SetISPRunningMode(IMPISP_RUNNING_MODE_DAY);" style="text;whiteSpace=wrap;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="120" y="10" width="530" height="310" as="geometry" />
+        <mxCell id="puL79OhdXBKn2q62L_fg-5" value="/* Step.1 System init */&#xa;sample_system_init();&#xa;    /* isp osd and ipu osd buffer size set */&#xa;    IMP_OSD_SetPoolSize(512*1024);&#xa;    IMP_ISP_Tuning_SetOsdPoolSize(512 * 1024);&#xa;    // 设置 sensor 基本信息&#xa;    memset(&amp;sensor_info, 0, sizeof(IMPSensorInfo));&#xa;    // 打开ISP模块&#xa;    ret = IMP_ISP_Open();&#xa;    // 添加一个sensor，用于向ISP模块提供数据源&#xa;    int IMP_ISP_AddSensor(IMPSensorInfo *pinfo);&#xa;    // 使能一个sensor&#xa;    int IMP_ISP_EnableSensor(void);&#xa;    // IMP系统初始化.&#xa;    int IMP_System_Init(void);&#xa;    // 使能ISP效果调试功能&#xa;    int IMP_ISP_EnableTuning(void);&#xa;    // 设置ISP 综合效果图片 对比度 锐度 饱和度 亮度参数 ，工作模式，正常模式或夜视模式；&#xa;     IMP_ISP_Tuning_SetContrast(128);&#xa;    IMP_ISP_Tuning_SetSharpness(128);&#xa;    IMP_ISP_Tuning_SetSaturation(128);&#xa;    IMP_ISP_Tuning_SetBrightness(128);&#xa;    ret = IMP_ISP_Tuning_SetISPRunningMode(IMPISP_RUNNING_MODE_DAY);" style="text;whiteSpace=wrap;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="100" y="60" width="530" height="310" as="geometry" />
         </mxCell>
-        <mxCell id="puL79OhdXBKn2q62L_fg-6" value="&lt;div style=&quot;color: #cccccc;background-color: #1f1f1f;font-family: Consolas, &#39;Courier New&#39;, monospace;font-weight: normal;font-size: 14px;line-height: 19px;white-space: pre;&quot;&gt;&lt;div&gt;/* Step.3 Encoder init */&lt;/div&gt;&lt;div&gt;sample_encoder_init()&lt;span style=&quot;color: rgb(106, 153, 85);&quot;&gt;; &lt;/span&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; // 设置 编码器 码率控制器 通道属性 编码Channel属性&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; IMPEncoderAttr *enc_attr&lt;span style=&quot;color: rgb(106, 153, 85);&quot;&gt;;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; IMPEncoderRcAttr *rc_attr&lt;span style=&quot;color: rgb(106, 153, 85);&quot;&gt;;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; IMPFSChnAttr *imp_chn_attr_tmp&lt;span style=&quot;color: rgb(106, 153, 85);&quot;&gt;;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; IMPEncoderCHNAttr channel_attr&lt;span style=&quot;color: rgb(106, 153, 85);&quot;&gt;;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; ...&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; if (chn[i].&lt;span style=&quot;color: rgb(86, 156, 214);&quot;&gt;payloadType&lt;/span&gt; == PT_H264) &lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; rc_attr-&amp;gt;&lt;span style=&quot;color: rgb(86, 156, 214);&quot;&gt;attrRcMode.rcMode&lt;/span&gt; = ENC_RC_MODE_CBR&lt;span style=&quot;color: rgb(106, 153, 85);&quot;&gt;;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; rc_attr-&amp;gt;&lt;span style=&quot;color: rgb(86, 156, 214);&quot;&gt;attrRcMode.attrH264Cbr.outBitRate&lt;/span&gt; = BITRATE_720P_Kbs&lt;span style=&quot;color: rgb(106, 153, 85);&quot;&gt;;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; rc_attr-&amp;gt;&lt;span style=&quot;color: rgb(86, 156, 214);&quot;&gt;attrRcMode.attrH264Cbr.maxQp&lt;/span&gt; = 45&lt;span style=&quot;color: rgb(106, 153, 85);&quot;&gt;;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; // 创建编码Channel,注册编码Channel到Group&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &lt;span style=&quot;color: rgb(86, 156, 214);&quot;&gt;ret&lt;/span&gt; = IMP_Encoder_CreateChn(chnNum, &amp;amp;channel_attr)&lt;span style=&quot;color: rgb(106, 153, 85);&quot;&gt;;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &lt;span style=&quot;color: rgb(86, 156, 214);&quot;&gt;ret&lt;/span&gt; = IMP_Encoder_RegisterChn(chn[i].index, chnNum)&lt;span style=&quot;color: rgb(106, 153, 85);&quot;&gt;;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="text;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="870" y="310" width="560" height="330" as="geometry" />
+        <mxCell id="puL79OhdXBKn2q62L_fg-7" value="/* Step.3 Encoder init */&#xa;sample_encoder_init(); &#xa;&#x9;    // 设置 编码器 码率控制器 通道属性 编码Channel属性&#xa;&#x9;    IMPEncoderAttr *enc_attr;&#xa;&#x9;    IMPEncoderRcAttr *rc_attr;&#xa;&#x9;    IMPFSChnAttr *imp_chn_attr_tmp;&#xa;&#x9;    IMPEncoderCHNAttr channel_attr;&#xa;&#x9;...&#xa;    if (chn[i].payloadType == PT_H264) &#xa;    rc_attr-&gt;attrRcMode.rcMode = ENC_RC_MODE_CBR;&#xa;    rc_attr-&gt;attrRcMode.attrH264Cbr.outBitRate = BITRATE_720P_Kbs;&#xa;    rc_attr-&gt;attrRcMode.attrH264Cbr.maxQp = 45;&#xa;&#x9;&#xa;&#x9;// 创建编码Channel,注册编码Channel到Group&#xa;    ret = IMP_Encoder_CreateChn(chnNum, &amp;channel_attr);&#xa;    ret = IMP_Encoder_RegisterChn(chn[i].index, chnNum);" style="text;whiteSpace=wrap;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="890" y="310" width="410" height="250" as="geometry" />
+        </mxCell>
+        <mxCell id="puL79OhdXBKn2q62L_fg-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="puL79OhdXBKn2q62L_fg-8" target="puL79OhdXBKn2q62L_fg-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="puL79OhdXBKn2q62L_fg-8" value="绑定源Cell和目的Cell" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=16;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="600" y="510" width="220" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="puL79OhdXBKn2q62L_fg-9" value="/* Step.4 Bind */&#xa;    // 绑定源Cell和目的Cell. 绑定关系成功后，源Cell(Output)产生的数据会自动传送到目的Cell(Group).&#xa;    ret = IMP_System_Bind(&amp;chn[i].framesource_chn, &amp;chn[i].imp_encoder);" style="text;whiteSpace=wrap;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="40" y="520" width="560" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="puL79OhdXBKn2q62L_fg-19" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="puL79OhdXBKn2q62L_fg-10" target="puL79OhdXBKn2q62L_fg-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="puL79OhdXBKn2q62L_fg-10" value="使能通道" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=16;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="600" y="650" width="220" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="puL79OhdXBKn2q62L_fg-11" value="/* Step.5 Stream On */&#xa;ret = sample_framesource_streamon();&#xa;    // 使能通道&#xa;    IMP_FrameSource_EnableChn(chn[i].index);" style="text;whiteSpace=wrap;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="240" y="640" width="290" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="puL79OhdXBKn2q62L_fg-21" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="puL79OhdXBKn2q62L_fg-12" target="puL79OhdXBKn2q62L_fg-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="puL79OhdXBKn2q62L_fg-12" value="获取流" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=16;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="600" y="770" width="220" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="puL79OhdXBKn2q62L_fg-13" value="/* Step.6 Get stream and Snap */&#xa;ret = pthread_create(&amp;tid, NULL, h264_stream_thread, NULL);&#xa;    ret = sample_get_video_stream();&#xa;        ret = pthread_create(&amp;tid[i], NULL, get_video_stream, (void *)arg);&#xa;            // 开启编码Channel接收图像&#xa;            ret = IMP_Encoder_StartRecvPic(chnNum);&#xa;            while{&#xa;                // 在获取码流之前可以用过此API进行Polling，当码流缓存不为空时或超时时函数返回。&#xa;                ret = IMP_Encoder_PollingStream(chnNum, 1000);&#xa;                // 获取编码的码流，释放码流缓存，此接口应当和IMP_Encoder_GetStream配对起来使用，&#xa;                ret = IMP_Encoder_GetStream(chnNum, &amp;stream, 1);&#xa;                IMP_Encoder_ReleaseStream(chnNum, &amp;stream);&#xa;            }&#xa;            // 停止编码Channel接收图像&#xa;            ret = IMP_Encoder_StopRecvPic(chnNum);" style="text;whiteSpace=wrap;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="830" y="770" width="560" height="250" as="geometry" />
+        </mxCell>
+        <mxCell id="puL79OhdXBKn2q62L_fg-14" value="关闭" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=16;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="600" y="910" width="220" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="puL79OhdXBKn2q62L_fg-15" value="/* Step.a Stream Off */&#xa;ret = sample_framesource_streamoff();        &#xa;    ret = IMP_FrameSource_DisableChn(chn[i].index);&#xa;/* Step.b UnBind */&#xa;ret = IMP_System_UnBind(&amp;chn[i].framesource_chn, &amp;chn[i].imp_encoder);&#xa;/* Step.c Encoder exit */&#xa;ret = sample_encoder_exit();&#xa;    ret = IMP_Encoder_Query(chnNum, &amp;chn_stat);&#xa;    ret = IMP_Encoder_UnRegisterChn(chnNum);&#xa;/* Step.d FrameSource exit */&#xa;ret = sample_framesource_exit();&#xa;    ret = IMP_FrameSource_DestroyChn(chn[i].index);&#xa;/* Step.e System exit */&#xa;ret = sample_system_exit();&#xa;    IMP_System_Exit();&#xa;    ret = IMP_ISP_DelSensor(&amp;sensor_info);&#xa;    ret = IMP_ISP_DisableTuning();&#xa;    IMP_ISP_Close()" style="text;whiteSpace=wrap;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="110" y="920" width="440" height="280" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
