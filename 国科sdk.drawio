@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36" version="24.7.7">
   <diagram name="第 1 页" id="YFDhzdePMvJW4xT07awg">
-    <mxGraphModel dx="774" dy="532" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="9999" pageHeight="9999" math="0" shadow="0">
+    <mxGraphModel dx="2359" dy="1060" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="9999" pageHeight="9999" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -34,25 +34,25 @@
         <mxCell id="ss0XN2OlAajM5HQxd2Lx-17" value="&lt;blockquote style=&quot;margin: 0 0 0 40px; border: none; padding: 0px;&quot;&gt;&lt;span style=&quot;text-align: center;&quot;&gt;&lt;b&gt;pipeline_start&lt;br&gt;&lt;/b&gt;&lt;/span&gt;XMEDIA_API_VENC_StartRecvFrame(res-&amp;gt;venc_chn[i], &amp;amp;recv_param);&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span class=&quot;fontstyle0&quot;&gt;开启编码通道接收输入图像&lt;/span&gt;&lt;br style=&quot;font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-variant-position: normal; line-height: normal; text-align: -webkit-auto; text-size-adjust: auto;&quot;&gt;pthread_create(&amp;amp;res-&amp;gt;venc_stream_thread, NULL, venc_stream_thread_func, res);&lt;br&gt;{&lt;/blockquote&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px; border: none; padding: 0px;&quot;&gt;while()&lt;/blockquote&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px; border: none; padding: 0px;&quot;&gt;select(maxfd + 1, &amp;amp;read_fds, NULL, NULL, &amp;amp;timeout_val);&lt;br&gt;XMEDIA_API_VENC_QueryStatus(venc_chn, &amp;amp;status);&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span class=&quot;fontstyle0&quot;&gt;查询编码通道状态&lt;/span&gt;&lt;br style=&quot;font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-variant-position: normal; line-height: normal; text-align: -webkit-auto; text-size-adjust: auto;&quot;&gt;XMEDIA_API_VENC_GetStream(venc_chn, &amp;amp;stream_video, XMEDIA_TRUE);&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span class=&quot;fontstyle0&quot;&gt;获取编码码流&lt;/span&gt;&lt;br style=&quot;font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-variant-position: normal; line-height: normal; text-align: -webkit-auto; text-size-adjust: auto;&quot;&gt;XMEDIA_API_VENC_ReleaseStream(venc_chn, &amp;amp;stream_video);&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;释放码流缓存&lt;/span&gt;&lt;br&gt;&lt;/blockquote&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px; border: none; padding: 0px;&quot;&gt;}&lt;/blockquote&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFCC;glass=0;shadow=1;align=left;" parent="1" vertex="1">
           <mxGeometry x="340" y="1560" width="680" height="210" as="geometry" />
         </mxCell>
-        <mxCell id="w6_0wbt8wsjKr0dHPIkn-1" value="&lt;div style=&quot;text-align: left;&quot;&gt;sys_init&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFCC;glass=0;shadow=1;" vertex="1" parent="1">
-          <mxGeometry x="1630" y="290" width="370" height="140" as="geometry" />
+        <mxCell id="w6_0wbt8wsjKr0dHPIkn-1" value="&lt;div style=&quot;text-align: left;&quot;&gt;sys_init&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFCC;glass=0;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="1700" y="540" width="370" height="140" as="geometry" />
         </mxCell>
-        <mxCell id="w6_0wbt8wsjKr0dHPIkn-2" value="音频处理" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#99FF33;glass=0;shadow=1;" vertex="1" parent="1">
+        <mxCell id="w6_0wbt8wsjKr0dHPIkn-2" value="音频处理" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#99FF33;glass=0;shadow=1;" parent="1" vertex="1">
           <mxGeometry x="1640" y="60" width="170" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="w6_0wbt8wsjKr0dHPIkn-3" value="&lt;div style=&quot;text-align: left;&quot;&gt;ai_init&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFCC;glass=0;shadow=1;" vertex="1" parent="1">
+        <mxCell id="w6_0wbt8wsjKr0dHPIkn-3" value="&lt;div style=&quot;text-align: left;&quot;&gt;ai_init&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFCC;glass=0;shadow=1;" parent="1" vertex="1">
           <mxGeometry x="1700" y="700" width="370" height="140" as="geometry" />
         </mxCell>
-        <mxCell id="w6_0wbt8wsjKr0dHPIkn-4" value="&lt;div style=&quot;text-align: left;&quot;&gt;ao_init&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFCC;glass=0;shadow=1;" vertex="1" parent="1">
+        <mxCell id="w6_0wbt8wsjKr0dHPIkn-4" value="&lt;div style=&quot;text-align: left;&quot;&gt;ao_init&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFCC;glass=0;shadow=1;" parent="1" vertex="1">
           <mxGeometry x="1660" y="840" width="370" height="140" as="geometry" />
         </mxCell>
-        <mxCell id="w6_0wbt8wsjKr0dHPIkn-5" value="&lt;div style=&quot;text-align: left;&quot;&gt;aenc_init&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFCC;glass=0;shadow=1;" vertex="1" parent="1">
+        <mxCell id="w6_0wbt8wsjKr0dHPIkn-5" value="&lt;div style=&quot;text-align: left;&quot;&gt;aenc_init&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFCC;glass=0;shadow=1;" parent="1" vertex="1">
           <mxGeometry x="1810" y="950" width="370" height="140" as="geometry" />
         </mxCell>
-        <mxCell id="w6_0wbt8wsjKr0dHPIkn-6" value="&lt;div style=&quot;text-align: left;&quot;&gt;adec_init&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFCC;glass=0;shadow=1;" vertex="1" parent="1">
+        <mxCell id="w6_0wbt8wsjKr0dHPIkn-6" value="&lt;div style=&quot;text-align: left;&quot;&gt;adec_init&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFCC;glass=0;shadow=1;" parent="1" vertex="1">
           <mxGeometry x="1750" y="1070" width="370" height="140" as="geometry" />
         </mxCell>
-        <mxCell id="w6_0wbt8wsjKr0dHPIkn-7" value="&lt;div style=&quot;text-align: left;&quot;&gt;pipeline_start&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFCC;glass=0;shadow=1;" vertex="1" parent="1">
+        <mxCell id="w6_0wbt8wsjKr0dHPIkn-7" value="&lt;div style=&quot;text-align: left;&quot;&gt;pipeline_start&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFCC;glass=0;shadow=1;" parent="1" vertex="1">
           <mxGeometry x="1740" y="1120" width="370" height="140" as="geometry" />
         </mxCell>
       </root>
