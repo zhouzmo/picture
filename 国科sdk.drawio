@@ -35,25 +35,25 @@
           <mxGeometry x="340" y="1560" width="680" height="210" as="geometry" />
         </mxCell>
         <mxCell id="w6_0wbt8wsjKr0dHPIkn-1" value="&lt;div style=&quot;text-align: left;&quot;&gt;sys_init&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFCC;glass=0;shadow=1;" parent="1" vertex="1">
-          <mxGeometry x="1700" y="540" width="370" height="140" as="geometry" />
+          <mxGeometry x="1610" y="440" width="370" height="140" as="geometry" />
         </mxCell>
         <mxCell id="w6_0wbt8wsjKr0dHPIkn-2" value="音频处理" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#99FF33;glass=0;shadow=1;" parent="1" vertex="1">
           <mxGeometry x="1640" y="60" width="170" height="80" as="geometry" />
         </mxCell>
         <mxCell id="w6_0wbt8wsjKr0dHPIkn-3" value="&lt;div style=&quot;text-align: left;&quot;&gt;ai_init&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFCC;glass=0;shadow=1;" parent="1" vertex="1">
-          <mxGeometry x="1700" y="700" width="370" height="140" as="geometry" />
+          <mxGeometry x="1620" y="640" width="370" height="140" as="geometry" />
         </mxCell>
         <mxCell id="w6_0wbt8wsjKr0dHPIkn-4" value="&lt;div style=&quot;text-align: left;&quot;&gt;ao_init&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFCC;glass=0;shadow=1;" parent="1" vertex="1">
-          <mxGeometry x="1660" y="840" width="370" height="140" as="geometry" />
+          <mxGeometry x="1630" y="800" width="370" height="140" as="geometry" />
         </mxCell>
         <mxCell id="w6_0wbt8wsjKr0dHPIkn-5" value="&lt;div style=&quot;text-align: left;&quot;&gt;aenc_init&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFCC;glass=0;shadow=1;" parent="1" vertex="1">
-          <mxGeometry x="1810" y="950" width="370" height="140" as="geometry" />
+          <mxGeometry x="1690" y="980" width="370" height="140" as="geometry" />
         </mxCell>
         <mxCell id="w6_0wbt8wsjKr0dHPIkn-6" value="&lt;div style=&quot;text-align: left;&quot;&gt;adec_init&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFCC;glass=0;shadow=1;" parent="1" vertex="1">
-          <mxGeometry x="1750" y="1070" width="370" height="140" as="geometry" />
+          <mxGeometry x="1690" y="1120" width="370" height="140" as="geometry" />
         </mxCell>
         <mxCell id="w6_0wbt8wsjKr0dHPIkn-7" value="&lt;div style=&quot;text-align: left;&quot;&gt;pipeline_start&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFCC;glass=0;shadow=1;" parent="1" vertex="1">
-          <mxGeometry x="1740" y="1120" width="370" height="140" as="geometry" />
+          <mxGeometry x="1710" y="1280" width="370" height="140" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
